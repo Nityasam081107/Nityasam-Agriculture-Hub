@@ -1,0 +1,1055 @@
+/* =========================================
+   NITYASAM AGRICULTURE HUB
+   COMPANY PAGE
+   PART 1
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, "Segoe UI", sans-serif;
+    background: #f6f9f6;
+    color: #17251b;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* LOADER */
+
+#company-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #083b1d,
+        #126b36,
+        #20894a
+    );
+
+    color: white;
+    text-align: center;
+}
+
+#company-loader img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+    margin-bottom: 18px;
+    padding: 8px;
+
+    border-radius: 18px;
+    background: rgba(255,255,255,0.12);
+}
+
+#company-loader h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+#company-loader p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 24px;
+}
+
+.company-loader-bar {
+    width: 260px;
+    height: 6px;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.2);
+}
+
+.company-loader-fill {
+    width: 0;
+    height: 100%;
+
+    border-radius: 20px;
+    background: white;
+
+    animation: companyLoader 1.8s ease forwards;
+}
+
+@keyframes companyLoader {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* MAIN */
+
+#company-content {
+    min-height: 100vh;
+}
+/* =========================================
+   COMPANY PAGE
+   PART 2 — NAVBAR
+========================================= */
+
+.company-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    padding: 14px 6%;
+
+    background: rgba(255,255,255,0.96);
+
+    border-bottom: 1px solid #e3ebe5;
+
+    box-shadow:
+        0 5px 22px rgba(20,70,38,0.07);
+
+    backdrop-filter: blur(12px);
+}
+
+
+/* LOGO */
+
+.company-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.company-logo img {
+    width: 45px;
+    height: 45px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+.company-logo h2 {
+    color: #126b36;
+
+    font-size: 1.05rem;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* NAV LINKS */
+
+.company-navbar ul {
+    display: flex;
+    align-items: center;
+
+    gap: 6px;
+
+    list-style: none;
+}
+
+.company-navbar li {
+    list-style: none;
+}
+
+.company-navbar a {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 9px 13px;
+
+    border-radius: 9px;
+
+    color: #34453a;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.company-navbar a:hover {
+    color: #126b36;
+
+    background: #edf7ef;
+
+    transform: translateY(-1px);
+}
+
+.company-navbar a.active {
+    color: #ffffff;
+
+    background: #126b36;
+
+    box-shadow:
+        0 5px 14px rgba(18,107,54,0.20);
+}
+/* =========================================
+   COMPANY PAGE
+   PART 3 — HERO
+========================================= */
+
+.company-hero {
+    position: relative;
+
+    min-height: 590px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 90px 7%;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #063a1c,
+            #126b36,
+            #1d8547
+        );
+}
+
+.company-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -170px;
+    top: -180px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.08);
+}
+
+.company-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    right: 15%;
+    bottom: -190px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(150,220,165,0.12);
+}
+
+
+/* HERO CONTENT */
+
+.company-hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 760px;
+
+    color: #ffffff;
+}
+
+.company-hero-content > span {
+    display: inline-flex;
+
+    padding: 8px 14px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,0.09);
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.company-hero h1 {
+    max-width: 720px;
+
+    margin-bottom: 22px;
+
+    font-size: clamp(
+        2.7rem,
+        6vw,
+        5rem
+    );
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.company-hero p {
+    max-width: 620px;
+
+    margin-bottom: 32px;
+
+    color:
+        rgba(255,255,255,0.87);
+
+    font-size: 1.15rem;
+
+    line-height: 1.8;
+}
+
+
+/* HERO BUTTON */
+
+.company-hero button {
+    padding: 14px 24px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #126b36;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    font-weight: 750;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.company-hero button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.25);
+}
+
+
+/* SECTION COMMON */
+
+.company-services,
+.company-benefits {
+    padding: 90px 7%;
+}
+
+.company-section-heading {
+    max-width: 760px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+.company-section-heading > span {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #168044;
+
+    font-size: 0.78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+}
+
+.company-section-heading h2 {
+    margin-bottom: 14px;
+
+    color: #183522;
+
+    font-size: clamp(
+        1.9rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.2;
+
+    font-weight: 800;
+}
+
+.company-section-heading p {
+    color: #66756b;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+/* =========================================
+   COMPANY PAGE
+   PART 4 — SERVICE CARDS
+========================================= */
+
+.company-service-grid {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+}
+
+
+.company-service-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 330px;
+
+    padding: 30px;
+
+    border: 1px solid #e2ebe4;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 30px rgba(25,73,43,0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.company-service-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #126b36,
+            #54a968
+        );
+
+    transform: scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.company-service-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #cce3d2;
+
+    box-shadow:
+        0 18px 45px rgba(25,73,43,0.12);
+}
+
+
+.company-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+.company-service-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: #edf7ef;
+
+    font-size: 1.7rem;
+}
+
+
+.company-service-card h3 {
+    margin-bottom: 11px;
+
+    color: #193722;
+
+    font-size: 1.25rem;
+
+    font-weight: 750;
+}
+
+
+.company-service-card p {
+    color: #69766d;
+
+    font-size: 0.93rem;
+
+    line-height: 1.75;
+
+    margin-bottom: 24px;
+}
+
+
+.company-service-card button {
+    width: fit-content;
+
+    margin-top: auto;
+
+    padding: 10px 15px;
+
+    border: 1px solid #d7e8da;
+
+    border-radius: 9px;
+
+    background: #f5faf6;
+
+    color: #126b36;
+
+    cursor: pointer;
+
+    font-size: 0.88rem;
+
+    font-weight: 700;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.company-service-card button:hover {
+    background: #126b36;
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   BENEFITS
+========================================= */
+
+.company-benefits {
+    background: #eef6f0;
+}
+
+
+.company-benefit-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+.company-benefit-card {
+    padding: 28px 22px;
+
+    border: 1px solid #dce9df;
+
+    border-radius: 16px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    box-shadow:
+        0 7px 25px rgba(25,73,43,0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.company-benefit-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(25,73,43,0.10);
+}
+
+
+.company-benefit-card > div {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 16px;
+
+    border-radius: 50%;
+
+    background: #edf7ef;
+
+    font-size: 1.5rem;
+}
+
+
+.company-benefit-card h3 {
+    margin-bottom: 9px;
+
+    color: #193722;
+
+    font-size: 1.05rem;
+}
+
+
+.company-benefit-card p {
+    color: #69766d;
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+}
+/* =========================================
+   COMPANY PAGE
+   PART 5 — CTA + FOOTER + RESPONSIVE
+========================================= */
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.company-cta {
+    padding: 85px 7%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a4925,
+            #126b36
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.company-cta-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+}
+
+
+.company-cta h2 {
+    margin-bottom: 14px;
+
+    font-size: clamp(
+        2rem,
+        4vw,
+        3rem
+    );
+
+    line-height: 1.2;
+}
+
+
+.company-cta p {
+    margin-bottom: 28px;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: 1rem;
+}
+
+
+.company-cta a {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #126b36;
+
+    font-weight: 750;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.company-cta a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.2);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.company-footer {
+    padding: 50px 7% 25px;
+
+    background: #092b18;
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.company-footer h2 {
+    margin-bottom: 10px;
+
+    font-size: 1.35rem;
+}
+
+
+.company-footer p {
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,0.72);
+
+    font-size: 0.9rem;
+}
+
+
+.company-copyright {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.12);
+
+    font-size: 0.8rem !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .company-navbar {
+        padding: 13px 4%;
+    }
+
+
+    .company-navbar ul {
+        gap: 2px;
+    }
+
+
+    .company-navbar a {
+        padding: 8px 9px;
+
+        font-size: 0.82rem;
+    }
+
+
+    .company-service-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .company-benefit-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .company-navbar {
+        padding: 12px 18px;
+    }
+
+
+    .company-logo h2 {
+        font-size: 0.92rem;
+    }
+
+
+    .company-logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    .company-navbar ul {
+        display: none;
+    }
+
+
+    .company-hero {
+        min-height: 540px;
+
+        padding:
+            75px 22px;
+    }
+
+
+    .company-hero h1 {
+        font-size: 2.55rem;
+
+        letter-spacing: -0.8px;
+    }
+
+
+    .company-hero p {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+
+    .company-services,
+    .company-benefits {
+        padding:
+            65px 20px;
+    }
+
+
+    .company-section-heading {
+        margin-bottom: 35px;
+    }
+
+
+    .company-section-heading h2 {
+        font-size: 2rem;
+    }
+
+
+    .company-service-grid {
+        grid-template-columns: 1fr;
+
+        gap: 17px;
+    }
+
+
+    .company-service-card {
+        min-height: auto;
+
+        padding: 25px;
+    }
+
+
+    .company-benefit-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .company-benefit-card {
+        padding: 25px 20px;
+    }
+
+
+    .company-cta {
+        padding:
+            65px 20px;
+    }
+
+
+    .company-footer {
+        padding:
+            40px 20px 22px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    #company-loader h1 {
+        font-size: 1.35rem;
+    }
+
+
+    .company-loader-bar {
+        width: 220px;
+    }
+
+
+    .company-logo h2 {
+        font-size: 0.82rem;
+    }
+
+
+    .company-hero h1 {
+        font-size: 2.15rem;
+    }
+
+
+    .company-hero-content > span {
+        font-size: 0.68rem;
+    }
+
+
+    .company-section-heading h2 {
+        font-size: 1.7rem;
+    }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}
+/* FIX COMPANY LOGO SIZE */
+
+.company-logo img {
+    width: 38px;
+    height: 38px;
+}
+
+.company-logo h2 {
+    font-size: 0.95rem;
+}
+/* FINAL LOGO SIZE FIX */
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.company-logo img {
+    width: 30px !important;
+    height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    object-fit: contain;
+}
+
+.company-logo h2 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+}
+.company-logo img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    flex-shrink: 0;
+}

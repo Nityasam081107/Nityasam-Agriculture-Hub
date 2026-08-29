@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Internships | Nityasam AGRI HUB</title>
+
+    <link rel="stylesheet" href="internship.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            🌱 Nityasam <span>AGRI HUB</span>
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="jobs.html">Jobs</a>
+
+            <a href="internship.html" class="active">
+                Internships
+            </a>
+
+            <a href="student.html">Students</a>
+
+            <a href="farmer.html">Farmers</a>
+
+        </nav>
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= MOBILE MENU ================= -->
+
+<div id="mobileMenu" class="mobile-menu">
+
+    <a href="index.html">Home</a>
+
+    <a href="jobs.html">Jobs</a>
+
+    <a href="internship.html">Internships</a>
+
+    <a href="student.html">Students</a>
+
+    <a href="farmer.html">Farmers</a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="internship-hero">
+
+    <div class="hero-content">
+
+        <div class="hero-badge">
+            🎓 AGRICULTURE CAREER OPPORTUNITIES
+        </div>
+
+        <h1>
+            Find Your Perfect
+            <span>Internship</span>
+        </h1>
+
+        <p>
+            Explore agriculture internships, gain practical
+            experience and build your professional career.
+        </p>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong id="heroInternshipCount">0</strong>
+                <small>Internships</small>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <small>Career Focused</small>
+            </div>
+
+            <div>
+                <strong>🌱</strong>
+                <small>Agriculture</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SEARCH ================= -->
+
+<section class="search-section">
+
+    <div class="search-container">
+
+        <div class="search-box">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search internship, company or location..."
+                oninput="renderInternships()"
+            >
+
+        </div>
+
+
+        <select
+            id="durationFilter"
+            onchange="renderInternships()">
+
+            <option value="">All Durations</option>
+
+            <option value="1 Month">1 Month</option>
+
+            <option value="2 Months">2 Months</option>
+
+            <option value="3 Months">3 Months</option>
+
+            <option value="6 Months">6 Months</option>
+
+        </select>
+
+
+        <button
+            class="clear-filter"
+            onclick="clearFilters()">
+
+            Clear
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MAIN ================= -->
+
+<main class="main-container">
+
+    <div class="page-heading">
+
+        <div>
+
+            <span class="small-title">
+                CAREER OPPORTUNITIES
+            </span>
+
+            <h2>
+                Latest Internships
+            </h2>
+
+            <p>
+                Find internships and get real-world
+                agriculture experience.
+            </p>
+
+        </div>
+
+        <div class="result-count"
+             id="resultCount">
+            0 internships
+        </div>
+
+    </div>
+
+
+    <!-- INTERNSHIP LIST -->
+
+    <div
+        id="internshipGrid"
+        class="internship-grid">
+
+    </div>
+
+
+    <!-- EMPTY -->
+
+    <div
+        id="emptyState"
+        class="empty-state"
+        style="display:none;">
+
+        <div class="empty-icon">
+            🎓
+        </div>
+
+        <h3>
+            No internships found
+        </h3>
+
+        <p>
+            Try another search or clear the filters.
+        </p>
+
+        <button
+            onclick="clearFilters()"
+            class="primary-btn">
+
+            View All Internships
+
+        </button>
+
+    </div>
+
+</main>
+
+
+<!-- ================= DETAILS MODAL ================= -->
+
+<div
+    id="internshipModal"
+    class="modal">
+
+    <div class="modal-overlay"
+         onclick="closeInternshipModal()">
+    </div>
+
+    <div class="modal-card">
+
+        <button
+            class="close-modal"
+            onclick="closeInternshipModal()">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-top">
+
+            <div class="modal-icon">
+                🎓
+            </div>
+
+            <div>
+
+                <span
+                    id="modalDuration"
+                    class="modal-duration">
+                </span>
+
+                <h2 id="modalTitle">
+                    Internship
+                </h2>
+
+                <p id="modalCompany">
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="modal-info">
+
+            <div>
+                <span>📍</span>
+                <strong>Location</strong>
+                <p id="modalLocation"></p>
+            </div>
+
+            <div>
+                <span>💰</span>
+                <strong>Stipend</strong>
+                <p id="modalStipend"></p>
+            </div>
+
+            <div>
+                <span>⏱️</span>
+                <strong>Duration</strong>
+                <p id="modalDuration2"></p>
+            </div>
+
+        </div>
+
+
+        <div class="modal-description">
+
+            <h3>
+                About this Internship
+            </h3>
+
+            <p id="modalDescription">
+            </p>
+
+        </div>
+
+
+        <div class="apply-box">
+
+            <div>
+
+                <strong>
+                    Interested in this internship?
+                </strong>
+
+                <small>
+                    Apply now and take the next step.
+                </small>
+
+            </div>
+
+            <button
+                id="modalApplyButton"
+                class="apply-btn">
+
+                🚀 Apply Now
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h3>
+                🌱 Nityasam AGRI HUB
+            </h3>
+
+            <p>
+                One platform for Agriculture
+                Students, Farmers, Companies & Businesses.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Quick Links
+            </h4>
+
+            <a href="index.html">Home</a>
+
+            <a href="jobs.html">Jobs</a>
+
+            <a href="internship.html">Internships</a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Career
+            </h4>
+
+            <a href="student.html">Students</a>
+
+            <a href="jobs.html">Agriculture Jobs</a>
+
+            <a href="internship.html">Internships</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 Nityasam AGRI HUB.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<script src="internship.js"></script>
+
+</body>
+
+</html>

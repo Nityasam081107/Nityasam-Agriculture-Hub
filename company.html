@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Nityasam AGRI HUB - Connect agriculture companies, students, farmers and opportunities."
+    >
+
+    <title>Companies | Nityasam AGRI HUB</title>
+
+    <link rel="stylesheet" href="company.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     PAGE LOADER
+===================================================== -->
+
+<div
+    id="companyLoader"
+    class="company-loader"
+>
+
+    <div class="company-loader-content">
+
+        <img
+            src="logo.png"
+            alt="Nityasam AGRI HUB Logo"
+        >
+
+        <h1>
+            NITYASAM AGRI HUB
+        </h1>
+
+        <p>
+            Connecting Agriculture & Industry 🏢🌾
+        </p>
+
+        <div class="company-loader-bar">
+
+            <div
+                class="company-loader-fill"
+                id="companyLoaderFill"
+            ></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
+
+<div
+    id="companyContent"
+    class="company-content"
+>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="company-navbar">
+
+    <div class="company-nav-container">
+
+
+        <a
+            href="index.html"
+            class="company-logo"
+        >
+
+            <img
+                src="logo.png"
+                alt="Nityasam Logo"
+            >
+
+            <div>
+
+                <strong>
+                    Nityasam
+                </strong>
+
+                <span>
+                    AGRI HUB
+                </span>
+
+            </div>
+
+        </a>
+
+
+        <nav class="company-nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="student.html">
+                Student
+            </a>
+
+            <a href="farmer.html">
+                Farmer
+            </a>
+
+            <a
+                href="company.html"
+                class="active"
+            >
+                Companies
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="internship.html">
+                Internships
+            </a>
+
+        </nav>
+
+
+        <button
+            type="button"
+            id="companyMenuBtn"
+            class="company-menu-btn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<div
+    id="companyMobileMenu"
+    class="company-mobile-menu"
+>
+
+    <a href="index.html">
+        🏠 Home
+    </a>
+
+    <a href="student.html">
+        🎓 Student
+    </a>
+
+    <a href="farmer.html">
+        🌾 Farmer
+    </a>
+
+    <a
+        href="company.html"
+        class="active"
+    >
+        🏢 Companies
+    </a>
+
+    <a href="jobs.html">
+        💼 Jobs
+    </a>
+
+    <a href="internship.html">
+        🎓 Internships
+    </a>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="company-hero">
+
+    <div class="company-hero-overlay"></div>
+
+
+    <div class="company-hero-content">
+
+        <div class="company-hero-badge">
+            🏢 AGRICULTURE BUSINESS NETWORK
+        </div>
+
+
+        <h1>
+
+            Connecting
+            <span>Agriculture & Industry</span>
+
+        </h1>
+
+
+        <p>
+
+            Discover agriculture companies,
+            career opportunities, internships,
+            products and professional connections
+            — all in one platform.
+
+        </p>
+
+
+        <div class="company-hero-actions">
+
+            <button
+                type="button"
+                id="companyExploreBtn"
+                class="company-primary-btn"
+            >
+                Explore Opportunities →
+            </button>
+
+
+            <a
+                href="jobs.html"
+                class="company-secondary-btn"
+            >
+                💼 Find Agriculture Jobs
+            </a>
+
+        </div>
+
+
+        <div class="company-hero-stats">
+
+            <div>
+
+                <strong>
+                    7+
+                </strong>
+
+                <span>
+                    Agriculture Areas
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    24/7
+                </strong>
+
+                <span>
+                    Opportunity Access
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    1
+                </strong>
+
+                <span>
+                    Agriculture Hub
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OPPORTUNITIES
+===================================================== -->
+
+<section
+    id="companyServices"
+    class="company-services"
+>
+
+    <div class="company-section-heading">
+
+        <span>
+            🚀 EXPLORE OPPORTUNITIES
+        </span>
+
+        <h2>
+            Everything Agriculture Companies Need
+        </h2>
+
+        <p>
+            Explore jobs, internships, products,
+            farmer connections and professional
+            agriculture opportunities.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH / FILTER -->
+
+    <div class="company-tools">
+
+        <div class="company-search-box">
+
+            <span>
+                🔍
+            </span>
+
+            <input
+                type="search"
+                id="companySearch"
+                placeholder="Search opportunities..."
+                autocomplete="off"
+            >
+
+        </div>
+
+
+        <select
+            id="companyCategory"
+            aria-label="Filter opportunities"
+        >
+
+            <option value="All">
+                All Opportunities
+            </option>
+
+            <option value="Jobs">
+                Jobs
+            </option>
+
+            <option value="Internships">
+                Internships
+            </option>
+
+            <option value="Government">
+                Government
+            </option>
+
+            <option value="Products">
+                Products
+            </option>
+
+            <option value="Farmers">
+                Farmer Connection
+            </option>
+
+            <option value="Network">
+                Company Network
+            </option>
+
+        </select>
+
+
+        <button
+            type="button"
+            id="companyClearBtn"
+            class="company-clear-btn"
+        >
+            Clear
+        </button>
+
+    </div>
+
+
+    <!-- OPPORTUNITY GRID -->
+
+    <div
+        id="companyServiceGrid"
+        class="company-service-grid"
+    >
+
+
+        <!-- JOBS -->
+
+        <article
+            class="company-service-card"
+            data-category="Jobs"
+        >
+
+            <div class="company-service-icon">
+                💼
+            </div>
+
+            <span class="company-card-label">
+                CAREER
+            </span>
+
+            <h3>
+                Agriculture Jobs
+            </h3>
+
+            <p>
+                Explore agriculture-related jobs
+                and career opportunities from
+                organizations and companies.
+            </p>
+
+            <a
+                href="jobs.html"
+                class="company-card-btn"
+            >
+                Explore Jobs →
+            </a>
+
+        </article>
+
+
+        <!-- INTERNSHIPS -->
+
+        <article
+            class="company-service-card"
+            data-category="Internships"
+        >
+
+            <div class="company-service-icon">
+                🎓
+            </div>
+
+            <span class="company-card-label">
+                LEARNING
+            </span>
+
+            <h3>
+                Agriculture Internships
+            </h3>
+
+            <p>
+                Find practical agriculture internships
+                and learning opportunities for students.
+            </p>
+
+            <a
+                href="internship.html"
+                class="company-card-btn"
+            >
+                Explore Internships →
+            </a>
+
+        </article>
+
+
+        <!-- GOVERNMENT -->
+
+        <article
+            class="company-service-card"
+            data-category="Government"
+        >
+
+            <div class="company-service-icon">
+                🏛️
+            </div>
+
+            <span class="company-card-label">
+                PUBLIC SECTOR
+            </span>
+
+            <h3>
+                Government Opportunities
+            </h3>
+
+            <p>
+                Discover government agriculture
+                opportunities, notifications,
+                eligibility and official information.
+            </p>
+
+            <button
+                type="button"
+                class="company-card-btn company-coming-btn"
+                data-title="Government Opportunities"
+            >
+                Explore Government →
+            </button>
+
+        </article>
+
+
+        <!-- PRODUCTS -->
+
+        <article
+            class="company-service-card"
+            data-category="Products"
+        >
+
+            <div class="company-service-icon">
+                📦
+            </div>
+
+            <span class="company-card-label">
+                SOLUTIONS
+            </span>
+
+            <h3>
+                Company Products
+            </h3>
+
+            <p>
+                Discover agriculture products,
+                technologies, equipment and
+                professional solutions.
+            </p>
+
+            <button
+                type="button"
+                class="company-card-btn company-coming-btn"
+                data-title="Company Products"
+            >
+                View Products →
+            </button>
+
+        </article>
+
+
+        <!-- FARMERS -->
+
+        <article
+            class="company-service-card"
+            data-category="Farmers"
+        >
+
+            <div class="company-service-icon">
+                🌾
+            </div>
+
+            <span class="company-card-label">
+                CONNECTION
+            </span>
+
+            <h3>
+                Farmer Connection
+            </h3>
+
+            <p>
+                Connect agriculture companies
+                with farmers and create useful
+                business opportunities.
+            </p>
+
+            <button
+                type="button"
+                class="company-card-btn company-coming-btn"
+                data-title="Farmer Connection"
+            >
+                Connect →
+            </button>
+
+        </article>
+
+
+        <!-- NETWORK -->
+
+        <article
+            class="company-service-card"
+            data-category="Network"
+        >
+
+            <div class="company-service-icon">
+                🤝
+            </div>
+
+            <span class="company-card-label">
+                NETWORK
+            </span>
+
+            <h3>
+                Company Network
+            </h3>
+
+            <p>
+                Build professional connections
+                with companies, students, farmers
+                and agriculture professionals.
+            </p>
+
+            <button
+                type="button"
+                class="company-card-btn company-coming-btn"
+                data-title="Company Network"
+            >
+                Explore Network →
+            </button>
+
+        </article>
+
+    </div>
+
+
+    <!-- EMPTY STATE -->
+
+    <div
+        id="companyEmptyState"
+        class="company-empty-state"
+    >
+
+        <div>
+            🔎
+        </div>
+
+        <h3>
+            No opportunities found
+        </h3>
+
+        <p>
+            Try another search or category.
+        </p>
+
+        <button
+            type="button"
+            id="companyShowAllBtn"
+        >
+            Show All Opportunities
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     WHY NITYASAM
+===================================================== -->
+
+<section class="company-benefits">
+
+    <div class="company-section-heading">
+
+        <span>
+            ⭐ WHY NITYASAM?
+        </span>
+
+        <h2>
+            One Platform for the Agriculture Ecosystem
+        </h2>
+
+        <p>
+            Bringing students, farmers, companies
+            and opportunities together.
+        </p>
+
+    </div>
+
+
+    <div class="company-benefit-grid">
+
+
+        <div class="company-benefit-card">
+
+            <div class="company-benefit-icon">
+                🔎
+            </div>
+
+            <h3>
+                Discover Opportunities
+            </h3>
+
+            <p>
+                Find relevant agriculture jobs,
+                internships and career opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="company-benefit-card">
+
+            <div class="company-benefit-icon">
+                🤝
+            </div>
+
+            <h3>
+                Build Connections
+            </h3>
+
+            <p>
+                Connect companies with students,
+                farmers and agriculture professionals.
+            </p>
+
+        </div>
+
+
+        <div class="company-benefit-card">
+
+            <div class="company-benefit-icon">
+                📈
+            </div>
+
+            <h3>
+                Grow Your Career
+            </h3>
+
+            <p>
+                Discover opportunities that help
+                you develop your agriculture career.
+            </p>
+
+        </div>
+
+
+        <div class="company-benefit-card">
+
+            <div class="company-benefit-icon">
+                🌱
+            </div>
+
+            <h3>
+                Agriculture Focused
+            </h3>
+
+            <p>
+                A platform designed specifically
+                for the agriculture ecosystem.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="company-cta">
+
+    <div class="company-cta-content">
+
+        <span>
+            🚀 START EXPLORING
+        </span>
+
+        <h2>
+            Ready to Explore Agriculture Opportunities?
+        </h2>
+
+        <p>
+            Find jobs, internships and professional
+            opportunities through Nityasam AGRI HUB.
+        </p>
+
+
+        <div class="company-cta-actions">
+
+            <a
+                href="jobs.html"
+                class="company-cta-primary"
+            >
+                Explore Jobs
+            </a>
+
+            <a
+                href="internship.html"
+                class="company-cta-secondary"
+            >
+                Explore Internships
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="company-footer">
+
+    <div class="company-footer-container">
+
+
+        <div class="company-footer-brand">
+
+            <h2>
+                🌱 Nityasam AGRI HUB
+            </h2>
+
+            <p>
+                Connecting Agriculture with
+                Technology, People & Opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="company-footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="student.html">
+                Student
+            </a>
+
+            <a href="farmer.html">
+                Farmer
+            </a>
+
+        </div>
+
+
+        <div class="company-footer-column">
+
+            <h3>
+                Opportunities
+            </h3>
+
+            <a href="jobs.html">
+                Agriculture Jobs
+            </a>
+
+            <a href="internship.html">
+                Internships
+            </a>
+
+            <a href="study.html">
+                Study Material
+            </a>
+
+        </div>
+
+
+        <div class="company-footer-column">
+
+            <h3>
+                Companies
+            </h3>
+
+            <a href="company.html">
+                Company Network
+            </a>
+
+            <a href="jobs.html">
+                Post / Explore Jobs
+            </a>
+
+            <a href="internship.html">
+                Internship Opportunities
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="company-footer-bottom">
+
+        <p>
+            © 2026 Nityasam AGRI HUB.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Designed & Developed by 👨‍💻 Tirth Barot
+        </p>
+
+    </div>
+
+</footer>
+
+
+</div>
+
+
+<!-- =====================================================
+     INFORMATION MODAL
+===================================================== -->
+
+<div
+    id="companyModal"
+    class="company-modal"
+    aria-hidden="true"
+>
+
+    <div
+        id="companyModalOverlay"
+        class="company-modal-overlay"
+    ></div>
+
+
+    <div
+        class="company-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="companyModalTitle"
+    >
+
+        <button
+            type="button"
+            id="companyModalClose"
+            class="company-modal-close"
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <div
+            id="companyModalIcon"
+            class="company-modal-icon"
+        >
+            🏢
+        </div>
+
+
+        <span class="company-modal-label">
+            NITYASAM AGRI HUB
+        </span>
+
+
+        <h2 id="companyModalTitle">
+            Agriculture Opportunity
+        </h2>
+
+
+        <p id="companyModalText">
+            More information will be available soon.
+        </p>
+
+
+        <button
+            type="button"
+            id="companyModalDone"
+            class="company-modal-btn"
+        >
+            Got It
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="company.js"></script>
+
+</body>
+
+</html>

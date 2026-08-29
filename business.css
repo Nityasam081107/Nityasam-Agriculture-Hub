@@ -1,0 +1,712 @@
+/* =========================================================
+   NITYASAM AGRICULTURE HUB
+   BUSINESS PORTAL - COMPLETE CSS
+========================================================= */
+
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fffaf3;
+    color:#222;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+#business-loader{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#5b2600,#b85c00);
+    color:white;
+}
+
+#business-loader img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+    margin-bottom:20px;
+}
+
+#business-loader h1{
+    font-size:28px;
+    letter-spacing:1px;
+}
+
+#business-loader p{
+    margin-top:10px;
+    opacity:.9;
+}
+
+.business-loader-bar{
+    width:250px;
+    height:7px;
+
+    margin-top:25px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.business-loader-fill{
+    width:0;
+    height:100%;
+
+    background:white;
+
+    animation:businessLoading 2.5s linear forwards;
+}
+
+@keyframes businessLoading{
+
+    from{
+        width:0;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+#business-content{
+    display:none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.business-navbar{
+    width:100%;
+    min-height:75px;
+
+    padding:12px 7%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#ffffff;
+
+    box-shadow:0 3px 18px rgba(0,0,0,.08);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.business-logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.business-logo img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.business-logo h2{
+    color:#9a4d00;
+    font-size:21px;
+}
+
+.business-navbar ul{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    list-style:none;
+}
+
+.business-navbar a{
+    color:#333;
+    text-decoration:none;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.business-navbar a:hover,
+.business-navbar a.active{
+    color:#9a4d00;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.business-hero{
+    min-height:78vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 8%;
+
+    text-align:center;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            rgba(65,30,0,.75),
+            rgba(65,30,0,.75)
+        ),
+        url("business-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.business-hero-content{
+    max-width:850px;
+}
+
+.business-hero-content > span{
+    display:inline-block;
+
+    padding:8px 18px;
+    margin-bottom:20px;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:30px;
+
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.business-hero h1{
+    font-size:55px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.business-hero p{
+    max-width:720px;
+
+    margin:0 auto 30px;
+
+    font-size:18px;
+    line-height:1.8;
+
+    color:rgba(255,255,255,.9);
+}
+
+.business-hero button{
+    padding:14px 28px;
+
+    border:none;
+    border-radius:30px;
+
+    background:#ffb74d;
+    color:#4a2500;
+
+    font-size:16px;
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.business-hero button:hover{
+    transform:translateY(-3px);
+    background:white;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.business-section-heading{
+    max-width:850px;
+
+    margin:0 auto 50px;
+
+    text-align:center;
+}
+
+.business-section-heading span{
+    color:#9a4d00;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+}
+
+.business-section-heading h2{
+    margin-top:10px;
+
+    color:#633300;
+
+    font-size:38px;
+
+    line-height:1.3;
+}
+
+.business-section-heading p{
+    margin-top:15px;
+
+    color:#666;
+
+    line-height:1.8;
+}
+
+
+/* =========================
+   BUSINESS SERVICES
+========================= */
+
+.business-services{
+    padding:90px 8%;
+
+    background:#ffffff;
+}
+
+.business-service-grid{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.business-service-card{
+    padding:32px 28px;
+
+    background:#fffaf3;
+
+    border:1px solid #f0dcc5;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 24px rgba(0,0,0,.06);
+
+    transition:.35s;
+}
+
+.business-service-card:hover{
+    transform:translateY(-8px);
+
+    border-color:#ffb74d;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.11);
+}
+
+.business-service-icon{
+    width:70px;
+    height:70px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin:0 auto 20px;
+
+    background:#fff0dc;
+
+    border-radius:20px;
+
+    font-size:32px;
+}
+
+.business-service-card h3{
+    color:#9a4d00;
+
+    font-size:21px;
+
+    margin-bottom:13px;
+}
+
+.business-service-card p{
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    min-height:72px;
+}
+
+.business-service-card button{
+    margin-top:22px;
+
+    padding:11px 20px;
+
+    border:1px solid #9a4d00;
+
+    border-radius:25px;
+
+    background:transparent;
+
+    color:#9a4d00;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.business-service-card button:hover{
+    background:#9a4d00;
+
+    color:white;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   BUSINESS BENEFITS
+========================= */
+
+.business-benefits{
+    padding:90px 8%;
+
+    background:#fff8ef;
+}
+
+.business-benefit-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.business-benefit-card{
+    padding:30px 25px;
+
+    background:white;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 22px rgba(0,0,0,.07);
+
+    transition:.35s;
+}
+
+.business-benefit-card:hover{
+    transform:translateY(-7px);
+}
+
+.business-benefit-card > div{
+    font-size:35px;
+
+    margin-bottom:15px;
+}
+
+.business-benefit-card h3{
+    color:#9a4d00;
+
+    font-size:19px;
+
+    margin-bottom:12px;
+}
+
+.business-benefit-card p{
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   BUSINESS CTA
+========================= */
+
+.business-cta{
+    padding:85px 8%;
+
+    background:linear-gradient(
+        135deg,
+        #9a4d00,
+        #5b2600
+    );
+
+    color:white;
+
+    text-align:center;
+}
+
+.business-cta-content{
+    max-width:750px;
+
+    margin:auto;
+}
+
+.business-cta h2{
+    font-size:38px;
+
+    margin-bottom:15px;
+}
+
+.business-cta p{
+    line-height:1.8;
+
+    color:rgba(255,255,255,.9);
+
+    margin-bottom:30px;
+}
+
+.business-cta a{
+    display:inline-block;
+
+    padding:13px 28px;
+
+    background:#ffb74d;
+
+    color:#4a2500;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.business-cta a:hover{
+    background:white;
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.business-footer{
+    padding:42px 20px;
+
+    background:#321700;
+
+    color:white;
+
+    text-align:center;
+}
+
+.business-footer h2{
+    margin-bottom:12px;
+}
+
+.business-footer p{
+    margin:8px 0;
+
+    color:rgba(255,255,255,.8);
+}
+
+.business-footer .business-copyright{
+    margin-top:20px;
+
+    font-size:13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+    .business-service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .business-benefit-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .business-hero h1{
+        font-size:45px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .business-navbar{
+        flex-direction:column;
+
+        gap:15px;
+
+        padding:15px 5%;
+    }
+
+    .business-logo h2{
+        font-size:18px;
+    }
+
+    .business-navbar ul{
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:12px;
+    }
+
+    .business-navbar a{
+        font-size:13px;
+    }
+
+    .business-hero{
+        min-height:75vh;
+
+        padding:55px 6%;
+    }
+
+    .business-hero h1{
+        font-size:34px;
+    }
+
+    .business-hero p{
+        font-size:15px;
+    }
+
+    .business-section-heading h2,
+    .business-cta h2{
+        font-size:28px;
+    }
+
+    .business-service-grid,
+    .business-benefit-grid{
+        grid-template-columns:1fr;
+    }
+
+    .business-services,
+    .business-benefits{
+        padding:60px 6%;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:400px){
+
+    .business-logo img{
+        width:43px;
+        height:43px;
+    }
+
+    .business-logo h2{
+        font-size:16px;
+    }
+
+    .business-hero h1{
+        font-size:29px;
+    }
+
+    .business-hero-content > span{
+        font-size:11px;
+    }
+
+}
+/* =========================
+   SIDEBAR TOGGLE BUTTON
+========================= */
+
+.sidebar-toggle{
+    width:44px;
+    height:44px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#0b7a3b;
+    color:white;
+
+    font-size:25px;
+    line-height:1;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.3s;
+}
+
+.sidebar-toggle:hover{
+    background:#075c2d;
+    transform:scale(1.05);
+}
+
+
+/* COLLAPSED SIDEBAR */
+
+.admin-sidebar.sidebar-hidden{
+    width:0;
+    padding:0;
+    overflow:hidden;
+}
+
+.admin-main.sidebar-expanded{
+    margin-left:0;
+}
+
+
+/* DESKTOP TRANSITION */
+
+.admin-sidebar{
+    transition:.3s ease;
+}
+
+.admin-main{
+    transition:.3s ease;
+}

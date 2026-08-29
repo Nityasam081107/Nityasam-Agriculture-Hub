@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nityasam AGRI HUB - Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+
+<body>
+
+<div class="admin-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="admin-sidebar"
+        id="adminSidebar"
+    >
+
+        <div class="admin-logo">
+            🌱 Nityasam
+        </div>
+
+
+        <button
+            class="sidebar-btn active"
+            onclick="showSection('dashboard', this)"
+        >
+            📊 Dashboard
+        </button>
+
+
+        <button
+            class="sidebar-btn"
+            onclick="showSection('jobs', this)"
+        >
+            💼 Jobs
+        </button>
+
+
+        <button
+            class="sidebar-btn"
+            onclick="showSection('internships', this)"
+        >
+            🎓 Internships
+        </button>
+
+
+        <button
+            class="sidebar-btn"
+            onclick="showSection('study', this)"
+        >
+            📚 Study Material
+        </button>
+
+
+        <button
+            class="sidebar-btn"
+            onclick="showSection('companies', this)"
+        >
+            🏢 Companies
+        </button>
+
+
+        <button
+            class="sidebar-btn"
+            onclick="showSection('settings', this)"
+        >
+            ⚙️ Settings
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="admin-main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="admin-topbar">
+
+            <button
+                class="menu-button"
+                onclick="toggleSidebar()"
+            >
+                ☰
+            </button>
+
+
+            <div>
+
+                <h2>Nityasam AGRI HUB</h2>
+
+                <small>Admin Panel</small>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+
+        <section
+            id="dashboardSection"
+            class="admin-section active-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>📊 Dashboard</h1>
+
+                <p>
+                    Welcome to Nityasam AGRI HUB Admin Panel.
+                </p>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        💼
+                    </div>
+
+                    <div>
+
+                        <h3 id="dashboardJobCount">
+                            0
+                        </h3>
+
+                        <p>Published Jobs</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🎓
+                    </div>
+
+                    <div>
+
+                        <h3 id="dashboardInternshipCount">
+                            0
+                        </h3>
+
+                        <p>Internships</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        📚
+                    </div>
+
+                    <div>
+
+                        <h3>0</h3>
+
+                        <p>Study Materials</p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🏢
+                    </div>
+
+                    <div>
+
+                        <h3>0</h3>
+
+                        <p>Companies</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- JOBS SECTION -->
+
+        <section
+            id="jobsSection"
+            class="admin-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>💼 Jobs Management</h1>
+
+                <p>
+                    Add and manage agriculture job opportunities.
+                </p>
+
+            </div>
+
+
+            <!-- ADD JOB -->
+
+            <div class="admin-card">
+
+                <h2>➕ Add New Job</h2>
+
+
+                <form id="jobForm">
+
+                    <input
+                        type="text"
+                        id="jobTitle"
+                        placeholder="Job Title"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="jobCompany"
+                        placeholder="Company Name"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="jobLocation"
+                        placeholder="Job Location"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="jobSalary"
+                        placeholder="Salary / Package"
+                    >
+
+
+                    <select
+                        id="jobType"
+                        required
+                    >
+
+                        <option value="">
+                            Select Job Type
+                        </option>
+
+                        <option value="Full Time">
+                            Full Time
+                        </option>
+
+                        <option value="Part Time">
+                            Part Time
+                        </option>
+
+                        <option value="Remote">
+                            Remote
+                        </option>
+
+                        <option value="Contract">
+                            Contract
+                        </option>
+
+                    </select>
+
+
+                    <textarea
+                        id="jobDescription"
+                        placeholder="Job Description"
+                        rows="5"
+                    ></textarea>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                            id="jobSubmitBtn"
+                        >
+                            🚀 Publish Job
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            onclick="clearJobForm()"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- PUBLISHED JOBS -->
+
+            <div class="admin-card">
+
+                <div class="list-header">
+
+                    <div>
+
+                        <h2>📢 Published Jobs</h2>
+
+                        <p id="jobCount">
+                            0 jobs published
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        id="jobSearch"
+                        placeholder="🔍 Search jobs..."
+                        oninput="renderJobs()"
+                    >
+
+                </div>
+
+
+                <div id="jobsList">
+
+                    <!-- Jobs will appear here -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- INTERNSHIPS SECTION -->
+
+        <section
+            id="internshipsSection"
+            class="admin-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>🎓 Internship Management</h1>
+
+                <p>
+                    Add and manage agriculture internships.
+                </p>
+
+            </div>
+
+
+            <!-- ADD INTERNSHIP -->
+
+            <div class="admin-card">
+
+                <h2>➕ Add New Internship</h2>
+
+
+                <form id="internshipForm">
+
+                    <input
+                        type="text"
+                        id="internshipTitle"
+                        placeholder="Internship Title"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="internshipCompany"
+                        placeholder="Company / Organization"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="internshipLocation"
+                        placeholder="Location"
+                        required
+                    >
+
+
+                    <input
+                        type="text"
+                        id="internshipStipend"
+                        placeholder="Stipend"
+                    >
+
+
+                    <select
+                        id="internshipDuration"
+                        required
+                    >
+
+                        <option value="">
+                            Select Duration
+                        </option>
+
+                        <option value="1 Month">
+                            1 Month
+                        </option>
+
+                        <option value="2 Months">
+                            2 Months
+                        </option>
+
+                        <option value="3 Months">
+                            3 Months
+                        </option>
+
+                        <option value="6 Months">
+                            6 Months
+                        </option>
+
+                    </select>
+
+
+                    <textarea
+                        id="internshipDescription"
+                        placeholder="Internship Description"
+                        rows="5"
+                    ></textarea>
+
+
+                    <div class="form-actions">
+
+                        <button
+                            type="submit"
+                            class="primary-btn"
+                            id="internshipSubmitBtn"
+                        >
+                            🚀 Publish Internship
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="secondary-btn"
+                            onclick="clearInternshipForm()"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- PUBLISHED INTERNSHIPS -->
+
+            <div class="admin-card">
+
+                <div class="list-header">
+
+                    <div>
+
+                        <h2>📢 Published Internships</h2>
+
+                        <p id="internshipCount">
+                            0 internships published
+                        </p>
+
+                    </div>
+
+
+                    <input
+                        type="text"
+                        id="internshipSearch"
+                        placeholder="🔍 Search internships..."
+                        oninput="renderInternships()"
+                    >
+
+                </div>
+
+
+                <div id="internshipsList">
+
+                    <!-- Internships will appear here -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- STUDY MATERIAL SECTION -->
+
+        <section
+            id="studySection"
+            class="admin-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>📚 Study Material</h1>
+
+                <p>
+                    Manage agriculture study materials.
+                </p>
+
+            </div>
+
+
+            <div class="admin-card">
+
+                <h2>🚧 Coming Soon</h2>
+
+                <p>
+                    Study material management will be added later.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- COMPANIES SECTION -->
+
+        <section
+            id="companiesSection"
+            class="admin-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>🏢 Companies</h1>
+
+                <p>
+                    Manage agriculture companies.
+                </p>
+
+            </div>
+
+
+            <div class="admin-card">
+
+                <h2>🚧 Coming Soon</h2>
+
+                <p>
+                    Company management will be added later.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SETTINGS SECTION -->
+
+        <section
+            id="settingsSection"
+            class="admin-section"
+        >
+
+            <div class="section-heading">
+
+                <h1>⚙️ Settings</h1>
+
+                <p>
+                    Admin panel settings.
+                </p>
+
+            </div>
+
+
+            <div class="admin-card">
+
+                <h2>Nityasam AGRI HUB</h2>
+
+                <p>
+                    Admin panel is ready for development.
+                </p>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="admin.js"></script>
+
+</body>
+
+</html>

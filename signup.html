@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | Nityasam Agriculture Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="signup-page">
+
+<div class="signup-container">
+
+    <img src="logo.png" alt="Logo" class="login-logo">
+
+    <h1>Create Account 🌾</h1>
+
+    <p class="login-text">
+        Join <strong>Nityasam Agriculture Hub</strong>
+    </p>
+
+    <form onsubmit="return validateSignup()">
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter Full Name"
+            required>
+
+        <input
+            type="email"
+            id="signupEmail"
+            placeholder="Enter Email"
+            required>
+            <div class="password-box">
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create Password"
+                required
+            >
+
+            <span class="toggle-password"
+                  onclick="toggleSignupPassword()">
+                👁️
+            </span>
+
+        </div>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password"
+                required
+            >
+
+            <span class="toggle-password"
+                  onclick="toggleConfirmPassword()">
+                👁️
+            </span>
+
+        </div>
+
+        <button type="submit" class="login-btn">
+            Create Account
+        </button>
+
+    </form>
+
+    <p class="signup-text">
+
+        Already have an account?
+
+        <a href="login.html">Login</a>
+
+    </p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html> 

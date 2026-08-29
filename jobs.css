@@ -1,0 +1,598 @@
+/* =====================================
+   NITYASAM AGRICULTURE HUB
+   JOBS PAGE CSS
+   PART 1
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f6;
+    color: #183b2a;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+#jobs-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+}
+
+#jobs-loader img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#jobs-loader h1 {
+    color: #17633e;
+    font-size: 24px;
+    text-align: center;
+}
+
+#jobs-loader p {
+    margin-top: 8px;
+    color: #68766e;
+    text-align: center;
+}
+
+.jobs-loader-bar {
+    width: 220px;
+    height: 5px;
+    margin-top: 20px;
+
+    background: #e1e9e4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.jobs-loader-fill {
+    width: 0;
+    height: 100%;
+    background: #17633e;
+
+    animation: jobsLoader 1.8s ease forwards;
+}
+
+@keyframes jobsLoader {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+#jobs-content {
+    display: none;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.jobs-navbar {
+    width: 100%;
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 6%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e1e8e4;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.jobs-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.jobs-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.jobs-logo h2 {
+    color: #17633e;
+    font-size: 19px;
+}
+
+.jobs-navbar ul {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+}
+
+.jobs-navbar a {
+    text-decoration: none;
+    color: #405047;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.jobs-navbar a:hover,
+.jobs-navbar a.active {
+    color: #17633e;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.jobs-hero {
+    min-height: 440px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 61, 43, 0.96),
+            rgba(18, 61, 43, 0.78)
+        );
+}
+
+.jobs-hero-content {
+    max-width: 700px;
+    color: white;
+}
+
+.jobs-hero-content span {
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.jobs-hero-content h1 {
+    margin-top: 15px;
+
+    font-size: 52px;
+    line-height: 1.1;
+}
+
+.jobs-hero-content p {
+    max-width: 600px;
+
+    margin-top: 20px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #e4eee8;
+}
+
+.jobs-hero-content button {
+    margin-top: 28px;
+
+    border: none;
+    border-radius: 9px;
+
+    padding: 13px 22px;
+
+    background: white;
+    color: #17633e;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.jobs-hero-content button:hover {
+    transform: translateY(-2px);
+}
+/* =========================
+   JOBS SECTION
+========================= */
+
+.jobs-section {
+    padding: 70px 7%;
+    background: #f5f8f6;
+}
+
+.jobs-section-heading {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.jobs-section-heading span {
+    color: #17633e;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.jobs-section-heading h2 {
+    margin-top: 10px;
+    font-size: 34px;
+    color: #183b2a;
+}
+
+.jobs-section-heading p {
+    margin-top: 10px;
+    color: #68766e;
+    line-height: 1.6;
+}
+
+
+/* SEARCH */
+
+.jobs-search-box {
+    max-width: 700px;
+    margin: 0 auto 35px;
+}
+
+.jobs-search-box input {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    border: 1px solid #d5e0da;
+    border-radius: 10px;
+
+    background: white;
+
+    font-size: 15px;
+    color: #183b2a;
+
+    outline: none;
+}
+
+.jobs-search-box input:focus {
+    border-color: #17633e;
+
+    box-shadow:
+        0 0 0 3px rgba(23, 99, 62, 0.08);
+}
+
+
+/* JOB LIST */
+
+.jobs-list {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* JOB CARD */
+
+.public-job-card {
+    background: white;
+
+    border: 1px solid #e0e8e3;
+    border-radius: 14px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.05);
+
+    transition: 0.2s;
+}
+
+.public-job-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 25px rgba(0, 0, 0, 0.08);
+}
+
+.public-job-card h3 {
+    color: #17633e;
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+.public-job-company {
+    font-weight: 600;
+    color: #344e41;
+
+    margin-bottom: 7px;
+}
+
+.public-job-location,
+.public-job-type,
+.public-job-salary {
+    color: #65736b;
+    font-size: 14px;
+
+    margin: 6px 0;
+}
+
+.public-job-description {
+    margin-top: 13px;
+
+    color: #596860;
+
+    line-height: 1.6;
+}
+
+
+/* EMPTY */
+
+.jobs-empty {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: white;
+
+    border: 1px dashed #ccd9d2;
+    border-radius: 14px;
+
+    color: #718078;
+}
+
+.jobs-empty-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.jobs-empty h3 {
+    color: #345244;
+    margin-bottom: 7px;
+}
+
+
+/* CTA */
+
+.jobs-cta {
+    padding: 65px 7%;
+
+    background: #123d2b;
+
+    text-align: center;
+}
+
+.jobs-cta-content {
+    max-width: 700px;
+    margin: auto;
+    color: white;
+}
+
+.jobs-cta h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.jobs-cta p {
+    color: #dce9e1;
+    line-height: 1.6;
+}
+
+.jobs-cta a {
+    display: inline-block;
+
+    margin-top: 22px;
+
+    padding: 12px 20px;
+
+    background: white;
+    color: #17633e;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+/* =========================
+   FOOTER
+========================= */
+
+.jobs-footer {
+    padding: 40px 7%;
+
+    background: #0d2e21;
+
+    color: white;
+
+    text-align: center;
+}
+
+.jobs-footer h2 {
+    color: #ffffff;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.jobs-footer p {
+    color: #cbdad2;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin: 5px 0;
+}
+
+.jobs-copyright {
+    margin-top: 15px !important;
+
+    font-size: 13px !important;
+
+    color: #9fb2a8 !important;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+    .jobs-navbar {
+        padding: 10px 4%;
+    }
+
+    .jobs-navbar ul {
+        gap: 12px;
+    }
+
+    .jobs-hero {
+        min-height: 400px;
+        padding: 50px 6%;
+    }
+
+    .jobs-hero-content h1 {
+        font-size: 42px;
+    }
+
+    .jobs-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .jobs-navbar {
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 14px;
+    }
+
+    .jobs-logo h2 {
+        font-size: 17px;
+    }
+
+    .jobs-navbar ul {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px 15px;
+    }
+
+    .jobs-navbar a {
+        font-size: 13px;
+    }
+
+
+    .jobs-hero {
+        min-height: 390px;
+
+        padding: 45px 20px;
+    }
+
+    .jobs-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .jobs-hero-content p {
+        font-size: 15px;
+    }
+
+
+    .jobs-section {
+        padding: 50px 18px;
+    }
+
+    .jobs-section-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .public-job-card {
+        padding: 18px;
+    }
+
+
+    .jobs-cta {
+        padding: 50px 20px;
+    }
+
+    .jobs-cta h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    @media (max-width: 380px) {
+
+    .jobs-logo h2 {
+        font-size: 15px;
+    }
+
+    .jobs-hero-content h1 {
+        font-size: 31px;
+    }
+
+    .jobs-section-heading h2 {
+        font-size: 25px;
+    }
+
+}
+}

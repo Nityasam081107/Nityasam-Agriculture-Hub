@@ -1,0 +1,417 @@
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4fff5;
+    color:#222;
+}
+
+
+/* ===========================
+   LOADER
+=========================== */
+
+#farmer-loader{
+    position:fixed;
+    inset:0;
+    background:#0b7a3b;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    z-index:9999;
+}
+
+#farmer-loader img{
+    width:100px;
+    margin-bottom:20px;
+}
+
+.loader-bar{
+    width:250px;
+    height:8px;
+    background:#ffffff55;
+    border-radius:20px;
+    margin-top:20px;
+    overflow:hidden;
+}
+
+.loader-fill{
+    width:0%;
+    height:100%;
+    background:#fff;
+    animation:loading 2.5s linear forwards;
+}
+
+@keyframes loading{
+
+    from{
+        width:0%;
+    }
+
+    to{
+        width:100%;
+    }
+
+}
+
+#farmer-content{
+    display:none;
+}
+
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.farmer-navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:15px 8%;
+
+    background:#fff;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.1);
+}
+
+.farmer-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.farmer-logo img{
+    width:55px;
+}
+
+.farmer-logo h2{
+    color:#0b7a3b;
+}
+
+.farmer-navbar ul{
+    display:flex;
+    list-style:none;
+    gap:22px;
+}
+
+.farmer-navbar a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.farmer-navbar a:hover,
+.farmer-navbar .active{
+    color:#0b7a3b;
+}
+
+
+/* ===========================
+   HERO
+=========================== */
+
+.farmer-hero{
+
+    min-height:80vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:#fff;
+
+    background:
+    linear-gradient(rgba(0,0,0,.45),
+    rgba(0,0,0,.45)),
+    url("farmer-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:40px;
+}
+
+.hero-text span{
+
+    display:inline-block;
+
+    background:#ffffff33;
+
+    padding:8px 18px;
+
+    border-radius:25px;
+
+    margin-bottom:20px;
+}
+
+.hero-text h1{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+}
+
+.hero-text p{
+
+    font-size:20px;
+
+    margin-bottom:30px;
+}
+
+.hero-text button{
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#ffd54f;
+
+    color:#173b25;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.hero-text button:hover{
+
+    transform:translateY(-3px);
+
+    background:#fff;
+}
+/* ===========================
+   CROP SECTION
+=========================== */
+
+.crop-section{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.crop-section h2{
+    text-align:center;
+    color:#0b7a3b;
+    font-size:38px;
+    margin-bottom:45px;
+}
+
+.crop-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.crop-card{
+    background:#f8fff9;
+    border-radius:20px;
+    padding:30px 25px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+    border:1px solid #d9f2df;
+}
+
+.crop-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+}
+
+.crop-card h3{
+    color:#0b7a3b;
+    margin-bottom:15px;
+    font-size:24px;
+}
+
+.crop-card p{
+    color:#666;
+    line-height:1.7;
+    margin-bottom:20px;
+}
+
+.crop-card button{
+    padding:12px 22px;
+    border:none;
+    border-radius:25px;
+    background:#0b7a3b;
+    color:#fff;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.crop-card button:hover{
+    background:#064e2b;
+}
+
+
+/* ===========================
+   FARMER SERVICES
+=========================== */
+
+.farmer-services{
+    padding:80px 8%;
+    background:#f4fff5;
+}
+
+.farmer-services h2{
+    text-align:center;
+    color:#0b7a3b;
+    font-size:36px;
+    margin-bottom:45px;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+}
+
+.service-card h3{
+    color:#0b7a3b;
+    margin-bottom:15px;
+}
+
+.service-card p{
+    color:#666;
+    line-height:1.7;
+}
+/* ===========================
+   WHY CHOOSE US
+=========================== */
+
+.why-farmer{
+    padding:80px 8%;
+    background:#ffffff;
+}
+
+.why-farmer h2{
+    text-align:center;
+    color:#0e6e38;
+    font-size:36px;
+    margin-bottom:45px;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.why-card{
+    background:#f8fff9;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.35s;
+    border:1px solid #d9f2df;
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-card h3{
+    color:#0b7a3b;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    color:#666;
+    line-height:1.7;
+}
+
+
+/* ===========================
+   FOOTER
+=========================== */
+
+.farmer-footer{
+    background:#064e2b;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.farmer-footer h2{
+    margin-bottom:15px;
+}
+
+.farmer-footer p{
+    margin:8px 0;
+    opacity:.9;
+}
+
+
+/* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .farmer-navbar{
+        flex-direction:column;
+        gap:15px;
+        padding:20px;
+    }
+
+    .farmer-navbar ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .hero-text h1{
+        font-size:36px;
+    }
+
+    .hero-text p{
+        font-size:16px;
+    }
+
+    .crop-section h2,
+    .farmer-services h2,
+    .why-farmer h2{
+        font-size:28px;
+    }
+
+    .crop-grid,
+    .service-grid,
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+}

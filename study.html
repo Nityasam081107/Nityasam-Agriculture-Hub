@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Nityasam AGRI HUB - Agriculture study materials, notes and learning resources."
+    >
+
+    <title>Study Material | Nityasam AGRI HUB</title>
+
+    <link rel="stylesheet" href="study.css">
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="study-navbar">
+
+    <div class="study-nav-container">
+
+        <a
+            href="index.html"
+            class="study-logo"
+        >
+            🌱 Nityasam <span>AGRI HUB</span>
+        </a>
+
+
+        <nav class="study-nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="student.html">
+                Student
+            </a>
+
+            <a href="farmer.html">
+                Farmer
+            </a>
+
+            <a href="jobs.html">
+                Jobs
+            </a>
+
+            <a href="internship.html">
+                Internships
+            </a>
+
+            <a
+                href="study.html"
+                class="active"
+            >
+                Study Material
+            </a>
+
+        </nav>
+
+
+        <button
+            type="button"
+            class="study-menu-btn"
+            id="studyMenuBtn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div
+    id="studyMobileMenu"
+    class="study-mobile-menu"
+>
+
+    <a href="index.html">
+        Home
+    </a>
+
+    <a href="student.html">
+        Student
+    </a>
+
+    <a href="farmer.html">
+        Farmer
+    </a>
+
+    <a href="jobs.html">
+        Jobs
+    </a>
+
+    <a href="internship.html">
+        Internships
+    </a>
+
+    <a
+        href="study.html"
+        class="active"
+    >
+        Study Material
+    </a>
+
+</div>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="study-hero">
+
+    <div class="study-hero-content">
+
+        <div class="study-badge">
+            📚 AGRICULTURE LEARNING HUB
+        </div>
+
+
+        <h1>
+            Learn Agriculture.
+            <span>Grow Your Future.</span>
+        </h1>
+
+
+        <p>
+            Access useful agriculture study materials,
+            notes, guides and learning resources designed
+            for students and agriculture learners.
+        </p>
+
+
+        <div class="study-hero-actions">
+
+            <button
+                type="button"
+                id="exploreStudyBtn"
+                class="study-primary-btn"
+            >
+                📚 Explore Materials
+            </button>
+
+
+            <a
+                href="student.html"
+                class="study-secondary-btn"
+            >
+                🎓 Student Zone
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<section class="study-search-section">
+
+    <div class="study-search-container">
+
+        <div class="study-search-box">
+
+            <span>
+                🔍
+            </span>
+
+            <input
+                type="search"
+                id="studySearch"
+                placeholder="Search study material..."
+                autocomplete="off"
+                aria-label="Search study material"
+            >
+
+        </div>
+
+
+        <select
+            id="studyCategory"
+            aria-label="Filter by subject"
+        >
+
+            <option value="All">
+                All Subjects
+            </option>
+
+            <option value="Agronomy">
+                Agronomy
+            </option>
+
+            <option value="Horticulture">
+                Horticulture
+            </option>
+
+            <option value="Soil Science">
+                Soil Science
+            </option>
+
+            <option value="Plant Protection">
+                Plant Protection
+            </option>
+
+            <option value="Agricultural Economics">
+                Agricultural Economics
+            </option>
+
+            <option value="Engineering">
+                Agricultural Engineering
+            </option>
+
+            <option value="Organic Farming">
+                Organic Farming
+            </option>
+
+        </select>
+
+
+        <button
+            type="button"
+            id="studyClear"
+            class="study-clear-btn"
+        >
+            Clear
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MAIN CONTENT
+===================================================== -->
+
+<main
+    id="studyMaterials"
+    class="study-main"
+>
+
+
+    <!-- SECTION HEADING -->
+
+    <div class="study-heading">
+
+        <div>
+
+            <span>
+                LEARNING RESOURCES
+            </span>
+
+            <h2>
+                Agriculture Study Material
+            </h2>
+
+            <p>
+                Learn important agriculture concepts
+                with organized study resources.
+            </p>
+
+        </div>
+
+
+        <div
+            id="studyResultCount"
+            class="study-result-count"
+        >
+            0 Materials
+        </div>
+
+    </div>
+
+
+    <!-- =================================================
+         MATERIAL GRID
+    ================================================= -->
+
+    <div
+        id="studyMaterialGrid"
+        class="study-material-grid"
+    >
+
+        <!-- JavaScript will load study materials here -->
+
+    </div>
+
+
+</main>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="study-cta">
+
+    <div>
+
+        <span>
+            🎓 KEEP LEARNING
+        </span>
+
+        <h2>
+            Build Your Agriculture Knowledge
+        </h2>
+
+        <p>
+            Learn consistently, understand agriculture
+            better and prepare yourself for future
+            opportunities.
+        </p>
+
+        <a href="student.html">
+            Explore Student Zone →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="study-footer">
+
+    <div class="study-footer-container">
+
+
+        <div>
+
+            <h3>
+                🌱 Nityasam AGRI HUB
+            </h3>
+
+            <p>
+                Connecting Agriculture, Students,
+                Farmers, Companies and Opportunities.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Learning
+            </h4>
+
+            <a href="study.html">
+                Study Material
+            </a>
+
+            <a href="student.html">
+                Student Zone
+            </a>
+
+            <a href="internship.html">
+                Internships
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Opportunities
+            </h4>
+
+            <a href="jobs.html">
+                Agriculture Jobs
+            </a>
+
+            <a href="internship.html">
+                Internships
+            </a>
+
+            <a href="farmer.html">
+                Farmer Zone
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="study-footer-bottom">
+
+        © 2026 Nityasam AGRI HUB.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     STUDY MATERIAL MODAL
+===================================================== -->
+
+<div
+    id="studyModal"
+    class="study-modal"
+    aria-hidden="true"
+>
+
+    <div
+        class="study-modal-overlay"
+        id="studyModalOverlay"
+    ></div>
+
+
+    <div
+        class="study-modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="studyModalTitle"
+    >
+
+        <button
+            type="button"
+            class="study-modal-close"
+            id="studyModalClose"
+            aria-label="Close study material"
+        >
+            ×
+        </button>
+
+
+        <div
+            id="studyModalIcon"
+            class="study-modal-icon"
+        >
+            📚
+        </div>
+
+
+        <span
+            id="studyModalCategory"
+            class="study-card-category"
+        >
+        </span>
+
+
+        <h2 id="studyModalTitle">
+            Study Material
+        </h2>
+
+
+        <p id="studyModalDescription">
+        </p>
+
+
+        <div class="study-coming-soon">
+
+            <div>
+                📖
+            </div>
+
+            <div>
+
+                <strong>
+                    Learning Content Coming Soon
+                </strong>
+
+                <small>
+                    Detailed notes, PDFs and learning
+                    resources will be added here.
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="studyModalDone"
+            class="study-modal-btn"
+        >
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="study.js"></script>
+
+</body>
+
+</html>

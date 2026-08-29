@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Nityasam Agriculture Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="login-page">
+
+<div class="login-container">
+
+    <img src="logo.png" alt="Logo" class="login-logo">
+
+    <h1>Welcome Back 👋</h1>
+
+    <p class="login-text">
+        Login to continue to
+        <strong>Nityasam Agriculture Hub</strong>
+    </p>
+
+    <form onsubmit="return validateLogin()">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            required
+        >
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter your Password"
+                required
+            >
+
+            <span class="toggle-password"
+                  onclick="togglePassword()">
+                👁️
+            </span>
+
+        </div>
+
+        <button type="submit" class="login-btn">
+            Login
+        </button>
+
+    </form>
+
+    <p class="signup-text">
+
+        Don't have an account?
+
+        <a href="signup.html">Create Account</a>
+
+    </p>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
